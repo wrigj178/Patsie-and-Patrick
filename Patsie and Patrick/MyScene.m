@@ -24,7 +24,7 @@
                                        CGRectGetMidY(self.frame));
         
         
-        
+        // yury was here
         [self addChild:myLabel];
     }
     return self;

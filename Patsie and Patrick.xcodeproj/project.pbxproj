@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BAD007718EADFDA008C9E57 /* SKSpriteNode+debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */; };
+		8BAD008318EAEBA9008C9E57 /* L1 Background 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007A18EAEBA9008C9E57 /* L1 Background 1.png */; };
+		8BAD008418EAEBA9008C9E57 /* L1 Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007B18EAEBA9008C9E57 /* L1 Background.png */; };
+		8BAD008518EAEBA9008C9E57 /* Bad present.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007C18EAEBA9008C9E57 /* Bad present.ai */; };
+		8BAD008618EAEBA9008C9E57 /* L1 Angry.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007D18EAEBA9008C9E57 /* L1 Angry.ai */; };
+		8BAD008718EAEBA9008C9E57 /* L1 annoyed.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007E18EAEBA9008C9E57 /* L1 annoyed.ai */; };
+		8BAD008818EAEBA9008C9E57 /* L1 green transition.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007F18EAEBA9008C9E57 /* L1 green transition.ai */; };
+		8BAD008918EAEBA9008C9E57 /* L1 mad.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD008018EAEBA9008C9E57 /* L1 mad.ai */; };
+		8BAD008A18EAEBA9008C9E57 /* present.ai in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD008118EAEBA9008C9E57 /* present.ai */; };
+		8BAD008B18EAEBA9008C9E57 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD008218EAEBA9008C9E57 /* sprites.atlas */; };
 		8BEE135E18CF893B00A975BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE135D18CF893B00A975BE /* Foundation.framework */; };
 		8BEE136018CF893B00A975BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE135F18CF893B00A975BE /* CoreGraphics.framework */; };
 		8BEE136218CF893B00A975BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE136118CF893B00A975BE /* UIKit.framework */; };
@@ -37,6 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BAD007518EADFDA008C9E57 /* SKSpriteNode+debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKSpriteNode+debug.h"; sourceTree = "<group>"; };
+		8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteNode+debug.m"; sourceTree = "<group>"; };
+		8BAD007A18EAEBA9008C9E57 /* L1 Background 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "L1 Background 1.png"; sourceTree = "<group>"; };
+		8BAD007B18EAEBA9008C9E57 /* L1 Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "L1 Background.png"; sourceTree = "<group>"; };
+		8BAD007C18EAEBA9008C9E57 /* Bad present.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Bad present.ai"; sourceTree = "<group>"; };
+		8BAD007D18EAEBA9008C9E57 /* L1 Angry.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "L1 Angry.ai"; sourceTree = "<group>"; };
+		8BAD007E18EAEBA9008C9E57 /* L1 annoyed.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "L1 annoyed.ai"; sourceTree = "<group>"; };
+		8BAD007F18EAEBA9008C9E57 /* L1 green transition.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "L1 green transition.ai"; sourceTree = "<group>"; };
+		8BAD008018EAEBA9008C9E57 /* L1 mad.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "L1 mad.ai"; sourceTree = "<group>"; };
+		8BAD008118EAEBA9008C9E57 /* present.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = present.ai; sourceTree = "<group>"; };
+		8BAD008218EAEBA9008C9E57 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		8BEE135A18CF893B00A975BE /* Patsie and Patrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patsie and Patrick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEE135D18CF893B00A975BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8BEE135F18CF893B00A975BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +108,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BAD007818EAEBA9008C9E57 /* Patsie + Patrick Art */ = {
+			isa = PBXGroup;
+			children = (
+				8BAD007918EAEBA9008C9E57 /* Backgrounds */,
+				8BAD007C18EAEBA9008C9E57 /* Bad present.ai */,
+				8BAD007D18EAEBA9008C9E57 /* L1 Angry.ai */,
+				8BAD007E18EAEBA9008C9E57 /* L1 annoyed.ai */,
+				8BAD007F18EAEBA9008C9E57 /* L1 green transition.ai */,
+				8BAD008018EAEBA9008C9E57 /* L1 mad.ai */,
+				8BAD008118EAEBA9008C9E57 /* present.ai */,
+				8BAD008218EAEBA9008C9E57 /* sprites.atlas */,
+			);
+			path = "Patsie + Patrick Art";
+			sourceTree = "<group>";
+		};
+		8BAD007918EAEBA9008C9E57 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				8BAD007A18EAEBA9008C9E57 /* L1 Background 1.png */,
+				8BAD007B18EAEBA9008C9E57 /* L1 Background.png */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
 		8BEE135118CF893A00A975BE = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +139,7 @@
 				8BEE138918CF893B00A975BE /* Patsie and PatrickTests */,
 				8BEE135C18CF893B00A975BE /* Frameworks */,
 				8BEE135B18CF893B00A975BE /* Products */,
+				8BAD007818EAEBA9008C9E57 /* Patsie + Patrick Art */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +167,8 @@
 		8BEE136518CF893B00A975BE /* Patsie and Patrick */ = {
 			isa = PBXGroup;
 			children = (
+				8BAD007518EADFDA008C9E57 /* SKSpriteNode+debug.h */,
+				8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */,
 				8BEE136E18CF893B00A975BE /* AppDelegate.h */,
 				8BEE136F18CF893B00A975BE /* AppDelegate.m */,
 				8BEE137118CF893B00A975BE /* Main.storyboard */,
@@ -241,9 +289,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEE136A18CF893B00A975BE /* InfoPlist.strings in Resources */,
+				8BAD008918EAEBA9008C9E57 /* L1 mad.ai in Resources */,
+				8BAD008618EAEBA9008C9E57 /* L1 Angry.ai in Resources */,
+				8BAD008518EAEBA9008C9E57 /* Bad present.ai in Resources */,
+				8BAD008B18EAEBA9008C9E57 /* sprites.atlas in Resources */,
 				8BEE137D18CF893B00A975BE /* Images.xcassets in Resources */,
+				8BAD008718EAEBA9008C9E57 /* L1 annoyed.ai in Resources */,
+				8BAD008318EAEBA9008C9E57 /* L1 Background 1.png in Resources */,
+				8BAD008A18EAEBA9008C9E57 /* present.ai in Resources */,
 				8BEE137B18CF893B00A975BE /* Spaceship.png in Resources */,
+				8BAD008818EAEBA9008C9E57 /* L1 green transition.ai in Resources */,
 				8BEE137318CF893B00A975BE /* Main.storyboard in Resources */,
+				8BAD008418EAEBA9008C9E57 /* L1 Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEE137918CF893B00A975BE /* MyScene.m in Sources */,
+				8BAD007718EADFDA008C9E57 /* SKSpriteNode+debug.m in Sources */,
 				8BEE137618CF893B00A975BE /* ViewController.m in Sources */,
 				8BEE137018CF893B00A975BE /* AppDelegate.m in Sources */,
 				8BEE136C18CF893B00A975BE /* main.m in Sources */,
@@ -476,6 +534,7 @@
 				8BEE139518CF893C00A975BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEE139618CF893C00A975BE /* Build configuration list for PBXNativeTarget "Patsie and PatrickTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +543,7 @@
 				8BEE139818CF893C00A975BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

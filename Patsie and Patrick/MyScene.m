@@ -78,8 +78,36 @@
              [SKAction waitForDuration:0.02]
              ]]
                           count:100]
+           ];
          }
     return self;
+}
+         
+- (void)initializeScene
+        {
+            self.physicsBody =
+            [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+            SKSpriteNode* bg =
+            [SKSpriteNode spriteNodeWithImageNamed:@"L1 background"];
+            bg.position =
+            CGPointMake(self.size.width/2, self.size.height/2);
+            [self addChild: bg];
+            [self addBackground];
+            
+}
+- (void)addBackground
+        {
+            _background =
+            [SKSpriteNode spriteNodeWithImageNamed:@"L1 Background"];
+            _background.position = CGPointMake(270, 15);
+            [self addChild:_background];
+            
+            CGSize contactSize = CGSizeMake(40, 30);
+            _background.physicsBody =
+            [SKPhysicsBody bodyWithRectangleOfSize:contactSize];
+            _background.physicsBody.dynamic = NO;
+            
+            
 }
 
 

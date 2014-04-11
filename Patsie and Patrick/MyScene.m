@@ -8,14 +8,49 @@
 
 #import "MyScene.h"
 
+@interface MyScene()
+
+@property SKSpriteNode* myCircle9;
+@property SKSpriteNode* myCircle8;
+@property SKSpriteNode* myCircle7;
+@property SKSpriteNode* myCircle6;
+
+
+@end
+
+
+
+typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
+{
+    CNPhysicsCategoryPatsiePatric    = 1 << 0,  // 0001 = 1
+    CNPhysicsCategoryPresent  = 1 << 1,  // 0010 = 2
+    CNPhysicsCategoryBadPresent    = 1 << 2,  // 0100 = 4
+    CNPhysicsCategoryBadPresent1    = 1 << 2,  // 0100 = 4
+    CNPhysicsCategoryBadPresent2    = 1 << 2,  // 0100 = 4
+    CNPhysicsCategoryEdge   = 1 << 3,  // 1000 = 8
+    CNPhysicsCategoryLabel  = 1 << 4,  // 10000 = 16
+};
+
 @implementation MyScene
 
 {
+    SKNode *_gameNode;
     SKSpriteNode *_background;
     SKSpriteNode *_l1patsiepatrick;
     SKSpriteNode *_l1patsiepatrickannoyed;
     SKSpriteNode *_l1patsiepatricktickedoff;
     SKSpriteNode *_l1patsiepatricktickangry;
+    SKSpriteNode *_badpresent1;
+    SKSpriteNode *_badpresent2;
+    SKSpriteNode *_badpresent3;
+    
+    int _currentLevel;
+}
+
+-(void) presents{
+    
+    
+    
 }
 
 
@@ -24,92 +59,127 @@
     if(self = [super initWithSize:size])
     {
         // NEED TO PUT IMAGES IN THE FILE W/ CORRECT NAMES
-        _l1patsiepatrick = [SKSpriteNode spriteNodeWithImageNamed:@"L1 Patsie+Patrick"];
-        _l1patsiepatrick.position = CGPointMake(self.size.width * 0.52,
-                                       self.size.height * 0.49);
+        _background = [SKSpriteNode spriteNodeWithImageNamed:@"L1Background1"];
+        _background.position = CGPointMake(self.size.width * 0.50,
+                                                self.size.height * 0.50);
+        _l1patsiepatrick = [SKSpriteNode spriteNodeWithImageNamed:@"L1PatsiePatrick"];
+        _l1patsiepatrick.position = CGPointMake(self.size.width * 0.32,
+                                                self.size.height * 0.38);
         
-//        _l1patsiepatrickannoyed; = [SKSpriteNode spriteNodeWithImageNamed:@"l1patsiepatrickannoyed"];
-//        _l1patsiepatrickannoyed; = CGPointMake(self.size.width * 0.25,
-//                                        self.size.height * 0.50);
-//        _l1patsiepatrickannoyed;.physicsBody =
-//        [SKPhysicsBody bodyWithRectangleOfSize:_l1patsiepatrickannoyed;size];
-//        
-//        _l1patsiepatricktickedoff = [SKSpriteNode spriteNodeWithImageNamed:@"l1patsiepatricktickedoff"];
-//        _l1patsiepatricktickedoff = CGPointMake(self.size.width * 0.50,
-//                                       self.size.height * 0.50);
-//        _l1patsiepatricktickedoff.physicsBody =
-//        [SKPhysicsBody bodyWithCircleOfRadius:_l1patsiepatricktickedoff.size.width/2];
-//        
-//        __l1patsiepatricktickangry = [SKSpriteNode spriteNodeWithImageNamed:@"l1patsiepatricktickangry"];
-//        __l1patsiepatricktickangry.position = CGPointMake(self.size.width * 0.75,
-//                                         self.size.height * 0.5);
+        [self addChild:_background];
         [self addChild:_l1patsiepatrick];
+        
+        _myCircle9 =[[SKSpriteNode alloc]initWithColor:[SKColor yellowColor] size:CGSizeMake(20, 20)];
+        
+        [_myCircle9 setPosition:CGPointMake(370, 350)];
+        
+        _myCircle9.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle9.size];
+        
+        [_myCircle9.physicsBody setDynamic:YES];
+        [self addChild:_myCircle9];
+        self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
+        
+        _myCircle8 =[[SKSpriteNode alloc]initWithColor:[SKColor purpleColor] size:CGSizeMake(20, 20)];
+        
+        [_myCircle8 setPosition:CGPointMake(550, 370)];
+        
+        _myCircle8.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle8.size];
+        
+        [_myCircle8.physicsBody setDynamic:YES];
+        [self addChild:_myCircle8];
+        self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
+        
+        _myCircle7 =[[SKSpriteNode alloc]initWithColor:[SKColor purpleColor] size:CGSizeMake(20, 20)];
+        
+        [_myCircle7 setPosition:CGPointMake(570, 470)];
+        
+        _myCircle7.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle7.size];
+        
+        [_myCircle7.physicsBody setDynamic:YES];
+        [self addChild:_myCircle7];
+        self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
+        
+//        _myCircle6 =[[SKSpriteNode alloc]initWithColor:[SKColor yellowColor] size:CGSizeMake(20, 20)];
+//        
+//        [_myCircle6 setPosition:CGPointMake(470, 470)];
+//        
+//        _myCircle6.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle7.size];
+//        
+//        [_myCircle6.physicsBody setDynamic:YES];
+//        [self addChild:_myCircle7];
+//        self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
+
+        
 //        [self addChild:_l1patsiepatricktickedoff];
 //        [self addChild:__l1patsiepatricktickangry];
-        self.physicsBody =
-        [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+//        self.physicsBody =
+//        [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         
-        //1
-        CGMutablePathRef l1patsiepatrickPath = CGPathCreateMutable();
-        //2
-        CGPathMoveToPoint(
-                          l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
-        //3
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
-        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
-        
-        //4
-        _l1patsiepatrick.physicsBody =
-        [SKPhysicsBody bodyWithPolygonFromPath:l1patsiepatrickPath];
-        //5
-        CGPathRelease(l1patsiepatrickPath);
-        
-        [self runAction:
-         [SKAction repeatAction:
-          [SKAction sequence:
-           @[[SKAction performSelector:@selector(spawnPresents)
-                              onTarget:self],
-             [SKAction waitForDuration:0.02]
-             ]]
-                          count:100]
-           ];
+//        //1
+//        CGMutablePathRef l1patsiepatrickPath = CGPathCreateMutable();
+//        //2
+//        CGPathMoveToPoint(
+//                          l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
+//        //3
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
+//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
+//        
+//        //4
+//        _l1patsiepatrick.physicsBody =
+//        [SKPhysicsBody bodyWithPolygonFromPath:l1patsiepatrickPath];
+//        //5
+//        CGPathRelease(l1patsiepatrickPath);
+//        
+//        [self runAction:
+//         [SKAction repeatAction:
+//          [SKAction sequence:
+//           @[[SKAction performSelector:@selector(spawnPresents)
+//                              onTarget:self],
+//             [SKAction waitForDuration:0.02]
+//             ]]
+//                          count:100]
+//           ];
          }
     return self;
 }
          
+
+
 - (void)initializeScene
-        {
-            self.physicsBody =
-            [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-            SKSpriteNode* bg =
-            [SKSpriteNode spriteNodeWithImageNamed:@"L1 background"];
-            bg.position =
-            CGPointMake(self.size.width/2, self.size.height/2);
-            [self addChild: bg];
-            [self addBackground];
-            
-}
-- (void)addBackground
-        {
-            _background =
-            [SKSpriteNode spriteNodeWithImageNamed:@"L1 Background"];
-            _background.position = CGPointMake(270, 15);
-            [self addChild:_background];
-            
-            CGSize contactSize = CGSizeMake(40, 30);
-            _background.physicsBody =
-            [SKPhysicsBody bodyWithRectangleOfSize:contactSize];
-            _background.physicsBody.dynamic = NO;
-            
-            
+{
+    
+    _gameNode = [SKNode node];
+    [self addChild:_gameNode];
+    
+    _currentLevel = 1;
+    [self setupLevel: _currentLevel];
+    
 }
 
+
+- (void)setupLevel:(int)levelNum
+{
+//    //load the plist file
+//    NSString *fileName =
+//    [NSString stringWithFormat:@"level%i",levelNum];
+//    NSString *filePath =
+//    [[NSBundle mainBundle] pathForResource:fileName
+//                                    ofType:@"plist"];
+//    NSDictionary *level =
+//    [NSDictionary dictionaryWithContentsOfFile:filePath];
+//    
+//    [self addCatAtPosition:
+//     CGPointFromString(level[@"catPosition"])];
+//    [self addBlocksFromArray:level[@"blocks"]];
+//    
+//    [[SKTAudio sharedInstance] playBackgroundMusic:@"bgMusic.mp3"];
+}
 
 - (void)spawnPresents
 {
@@ -154,27 +224,137 @@
 
 }
 
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    for (SKSpriteNode *node in self.children) {
-        if ([node.name isEqualToString:@"present"])
-            [node.physicsBody applyImpulse:
-             CGVectorMake(0, arc4random()%50)];
-        if ([node.name isEqualToString:@"Bad present"])
-            [node.physicsBody applyImpulse:
-             CGVectorMake(0, arc4random()%50)];
-        if ([node.name isEqualToString:@"Bad present Right"])
-            [node.physicsBody applyImpulse:
-             CGVectorMake(0, arc4random()%50)];
-        if ([node.name isEqualToString:@"Bad present Three"])
-            [node.physicsBody applyImpulse:
-             CGVectorMake(0, arc4random()%50)];
-    }
-    SKAction *shake = [SKAction moveByX:0 y:10 duration:0.05];
+    [super touchesBegan:touches withEvent:event];
+    
+    if (_myCircle9.position.x > location.x + 10 && _myCircle9.position.x < location.x-10) & do [y position)
+                                                                                                {
+                                                                                                    removeparent or set back to the top
+                                                                                                    //how to set random value value in C
+                                                                                                }
+        
+    // 1
+    UITouch *touch = [touches anyObject];
+    //CGPoint location = [touch locationInNode:self];
+    
+    [_myCircle9 removeFromParent];
+    [_myCircle8 removeFromParent];
+    
+    
+    //[_myCircle7 removeFromParent];
+    
+//    // 2
+//    [self.physicsWorld enumerateBodiesAtPoint:location
+//                                   usingBlock:
+//     ^(SKPhysicsBody *body, BOOL *stop) {
+//         // 3
+//         if (body.categoryBitMask == CNPhysicsCategoryBlock) {
+//             [body.node removeFromParent];
+//             *stop = YES; // 4
+//             
+//             // 5
+//             [self runAction:[SKAction playSoundFileNamed:@"pop.mp3"
+//                                        waitForCompletion:NO]];
+//         }
+//     }];
+//    
+}
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    for (SKSpriteNode *node in self.children) {
+//        if ([node.name isEqualToString:@"present"])
+//            [node.physicsBody applyImpulse:
+//             CGVectorMake(0, arc4random()%50)];
+//        if ([node.name isEqualToString:@"Bad present"])
+//            [node.physicsBody applyImpulse:
+//             CGVectorMake(0, arc4random()%50)];
+//        if ([node.name isEqualToString:@"Bad present Right"])
+//            [node.physicsBody applyImpulse:
+//             CGVectorMake(0, arc4random()%50)];
+//        if ([node.name isEqualToString:@"Bad present Three"])
+//            [node.physicsBody applyImpulse:
+//             CGVectorMake(0, arc4random()%50)];
+//    }
+//    SKAction *shake = [SKAction moveByX:0 y:10 duration:0.05];
+//    [self runAction:
+//     [SKAction repeatAction:
+//      [SKAction sequence:@[shake, [shake reversedAction]]]
+//                      count:5]];
+//}
+- (void)inGameMessage:(NSString*)text
+{
+    // 1
+    SKLabelNode *label =
+    [SKLabelNode labelNodeWithFontNamed:@"Desdemona"];
+    label.text = text;
+    label.fontSize = 64.0;
+    label.color = [SKColor whiteColor];
+    
+    // 2
+    label.position = CGPointMake(self.frame.size.width/2,
+                                 self.frame.size.height-10);
+    label.physicsBody =
+    [SKPhysicsBody bodyWithCircleOfRadius:10];
+    label.physicsBody.collisionBitMask = CNPhysicsCategoryEdge;
+    label.physicsBody.categoryBitMask = CNPhysicsCategoryLabel;
+    label.physicsBody.restitution = 0.7;
+    
+    // 3
+    [_gameNode addChild:label];
+    
+    // 4
+    [label runAction:
+     [SKAction sequence:@[
+                          [SKAction waitForDuration:3.0],
+                          [SKAction removeFromParent]]]];
+}
+- (void)newGame
+{
+    [_gameNode removeAllChildren];
+    [self setupLevel: _currentLevel];
+    [self inGameMessage:[NSString stringWithFormat:
+                         @"Level %i", _currentLevel]];
+}
+
+- (void)win
+{
+    // 1
+    _l1patsiepatrick.physicsBody=nil;
+    
+    // 2
+    CGFloat curlY = _badpresent1.position.y+_l1patsiepatrick.size.height/2;
+    CGPoint curlPoint = CGPointMake(_badpresent1.position.x, curlY);
+    
+    // 3
+    [_l1patsiepatrick runAction:
+     [SKAction group:
+      @[[SKAction moveTo:curlPoint duration:0.66],
+        [SKAction rotateToAngle:0 duration:0.5]]]];
+    
+    [self inGameMessage:@"NOMMMMM!"];
+    
+    // 4
     [self runAction:
-     [SKAction repeatAction:
-      [SKAction sequence:@[shake, [shake reversedAction]]]
-                      count:5]];
+     [SKAction sequence:
+      @[[SKAction waitForDuration:5.0],
+        [SKAction performSelector:@selector(newGame)
+                         onTarget:self]]]];
+    
+    // 5
+    [_l1patsiepatrick runAction:
+     [SKAction animateWithTextures:
+      @[[SKTexture textureWithImageNamed:@"L1Annoyed"],
+        [SKTexture textureWithImageNamed:@"L1Mad"],
+        [SKTexture textureWithImageNamed:@"L1Angry"]]
+                      timePerFrame:0.25]];
+    
+    // 6
+//    [[SKTAudio sharedInstance] pauseBackgroundMusic];
+//    [self runAction:[SKAction playSoundFileNamed:@"win.mp3"
+//                               waitForCompletion:NO]];
 }
 
 

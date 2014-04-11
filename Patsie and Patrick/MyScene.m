@@ -71,13 +71,14 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         
         _myCircle9 =[[SKSpriteNode alloc]initWithColor:[SKColor yellowColor] size:CGSizeMake(20, 20)];
         
-        [_myCircle9 setPosition:CGPointMake(370, 350)];
+        [_myCircle9 setPosition:CGPointMake(270, 350)];
         
         _myCircle9.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle9.size];
         
         [_myCircle9.physicsBody setDynamic:YES];
         [self addChild:_myCircle9];
         self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
+        
         
         _myCircle8 =[[SKSpriteNode alloc]initWithColor:[SKColor purpleColor] size:CGSizeMake(20, 20)];
         
@@ -89,6 +90,8 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         [self addChild:_myCircle8];
         self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
         
+        
+        
         _myCircle7 =[[SKSpriteNode alloc]initWithColor:[SKColor purpleColor] size:CGSizeMake(20, 20)];
         
         [_myCircle7 setPosition:CGPointMake(570, 470)];
@@ -99,52 +102,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         [self addChild:_myCircle7];
         self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
         
-//        _myCircle6 =[[SKSpriteNode alloc]initWithColor:[SKColor yellowColor] size:CGSizeMake(20, 20)];
-//        
-//        [_myCircle6 setPosition:CGPointMake(470, 470)];
-//        
-//        _myCircle6.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myCircle7.size];
-//        
-//        [_myCircle6.physicsBody setDynamic:YES];
-//        [self addChild:_myCircle7];
-//        self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
 
-        
-//        [self addChild:_l1patsiepatricktickedoff];
-//        [self addChild:__l1patsiepatricktickangry];
-//        self.physicsBody =
-//        [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-        
-        
-//        //1
-//        CGMutablePathRef l1patsiepatrickPath = CGPathCreateMutable();
-//        //2
-//        CGPathMoveToPoint(
-//                          l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
-//        //3
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, -_l1patsiepatrick.size.height/2);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, -_l1patsiepatrick.size.height/4);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, _l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/4, _l1patsiepatrick.size.height/2);
-//        CGPathAddLineToPoint(l1patsiepatrickPath, nil, -_l1patsiepatrick.size.width/2, _l1patsiepatrick.size.height/4);
-//        
-//        //4
-//        _l1patsiepatrick.physicsBody =
-//        [SKPhysicsBody bodyWithPolygonFromPath:l1patsiepatrickPath];
-//        //5
-//        CGPathRelease(l1patsiepatrickPath);
-//        
-//        [self runAction:
-//         [SKAction repeatAction:
-//          [SKAction sequence:
-//           @[[SKAction performSelector:@selector(spawnPresents)
-//                              onTarget:self],
-//             [SKAction waitForDuration:0.02]
-//             ]]
-//                          count:100]
-//           ];
          }
     return self;
 }
@@ -165,20 +123,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
 
 - (void)setupLevel:(int)levelNum
 {
-//    //load the plist file
-//    NSString *fileName =
-//    [NSString stringWithFormat:@"level%i",levelNum];
-//    NSString *filePath =
-//    [[NSBundle mainBundle] pathForResource:fileName
-//                                    ofType:@"plist"];
-//    NSDictionary *level =
-//    [NSDictionary dictionaryWithContentsOfFile:filePath];
-//    
-//    [self addCatAtPosition:
-//     CGPointFromString(level[@"catPosition"])];
-//    [self addBlocksFromArray:level[@"blocks"]];
-//    
-//    [[SKTAudio sharedInstance] playBackgroundMusic:@"bgMusic.mp3"];
+
 }
 
 - (void)spawnPresents
@@ -235,29 +180,30 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
             _myCircle9.position.y < location.y + 50 && _myCircle9.position.y > location.y - 50) {
         
             _myCircle9.position = CGPointMake(400, 400);
+        }//CG
+    }//for
+    
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        
+    if (_myCircle9.position.x < location.x + 50 && _myCircle9.position.x > location.x - 50 &&
+        
+        _myCircle9.position.y < location.y + 50 && _myCircle9.position.y > location.y - 50) {
+        
+        _myCircle9.position = CGPointMake(200, 400);
+        
+    }//for2
+    }//CG2
+    
+        
+        
+        
             
-            //[ _myCircle9 removeFromParent];
-            
-        }}}
+        }//TB
     
     //[_myCircle7 removeFromParent];
     
-//    // 2
-//    [self.physicsWorld enumerateBodiesAtPoint:location
-//                                   usingBlock:
-//     ^(SKPhysicsBody *body, BOOL *stop) {
-//         // 3
-//         if (body.categoryBitMask == CNPhysicsCategoryBlock) {
-//             [body.node removeFromParent];
-//             *stop = YES; // 4
-//             
-//             // 5
-//             [self runAction:[SKAction playSoundFileNamed:@"pop.mp3"
-//                                        waitForCompletion:NO]];
-//         }
-//     }];
-//    
-//}
+
 
 - (void)inGameMessage:(NSString*)text
 {
@@ -326,10 +272,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         [SKTexture textureWithImageNamed:@"L1Angry"]]
                       timePerFrame:0.25]];
     
-    // 6
-//    [[SKTAudio sharedInstance] pauseBackgroundMusic];
-//    [self runAction:[SKAction playSoundFileNamed:@"win.mp3"
-//                               waitForCompletion:NO]];
+//waitForCompletion:NO;]]
 }
 
 

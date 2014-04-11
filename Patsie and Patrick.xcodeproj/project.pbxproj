@@ -149,6 +149,7 @@
 		8BEE136518CF893B00A975BE /* Patsie and Patrick */ = {
 			isa = PBXGroup;
 			children = (
+				95B401F818F87400001FA0A9 /* iPad */,
 				8BAD007518EADFDA008C9E57 /* SKSpriteNode+debug.h */,
 				8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */,
 				8BEE136E18CF893B00A975BE /* AppDelegate.h */,
@@ -192,6 +193,13 @@
 				8BEE138C18CF893B00A975BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95B401F818F87400001FA0A9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +249,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jasmine Wright";
 				TargetAttributes = {
+					8BEE135918CF893B00A975BE = {
+						DevelopmentTeam = RHS54MNZHX;
+					};
 					8BEE138118CF893B00A975BE = {
 						TestTargetID = 8BEE135918CF893B00A975BE;
 					};
@@ -426,11 +437,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Patsie and Patrick/Patsie and Patrick-Prefix.pch";
 				INFOPLIST_FILE = "Patsie and Patrick/Patsie and Patrick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -440,11 +456,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Patsie and Patrick/Patsie and Patrick-Prefix.pch";
 				INFOPLIST_FILE = "Patsie and Patrick/Patsie and Patrick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

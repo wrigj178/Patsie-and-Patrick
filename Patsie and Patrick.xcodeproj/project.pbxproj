@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BAD007718EADFDA008C9E57 /* SKSpriteNode+debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */; };
+		8BAD008318EAEBA9008C9E57 /* L1Background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007A18EAEBA9008C9E57 /* L1Background1.png */; };
+		8BAD008418EAEBA9008C9E57 /* L1Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD007B18EAEBA9008C9E57 /* L1Background.png */; };
 		8BEE135E18CF893B00A975BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE135D18CF893B00A975BE /* Foundation.framework */; };
 		8BEE136018CF893B00A975BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE135F18CF893B00A975BE /* CoreGraphics.framework */; };
 		8BEE136218CF893B00A975BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE136118CF893B00A975BE /* UIKit.framework */; };
@@ -24,6 +27,7 @@
 		8BEE138618CF893B00A975BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEE136118CF893B00A975BE /* UIKit.framework */; };
 		8BEE138E18CF893B00A975BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BEE138C18CF893B00A975BE /* InfoPlist.strings */; };
 		8BEE139018CF893B00A975BE /* Patsie_and_PatrickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE138F18CF893B00A975BE /* Patsie_and_PatrickTests.m */; };
+		95BB177618F3919B002DC954 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 95BB177518F3919B002DC954 /* sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BAD007518EADFDA008C9E57 /* SKSpriteNode+debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKSpriteNode+debug.h"; sourceTree = "<group>"; };
+		8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteNode+debug.m"; sourceTree = "<group>"; };
+		8BAD007A18EAEBA9008C9E57 /* L1Background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L1Background1.png; sourceTree = "<group>"; };
+		8BAD007B18EAEBA9008C9E57 /* L1Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L1Background.png; sourceTree = "<group>"; };
 		8BEE135A18CF893B00A975BE /* Patsie and Patrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patsie and Patrick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEE135D18CF893B00A975BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8BEE135F18CF893B00A975BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +68,7 @@
 		8BEE138B18CF893B00A975BE /* Patsie and PatrickTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Patsie and PatrickTests-Info.plist"; sourceTree = "<group>"; };
 		8BEE138D18CF893B00A975BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8BEE138F18CF893B00A975BE /* Patsie_and_PatrickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Patsie_and_PatrickTests.m; sourceTree = "<group>"; };
+		95BB177518F3919B002DC954 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = sprites.atlas; path = Backgrounds/sprites.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BAD007818EAEBA9008C9E57 /* Patsie + Patrick Art */ = {
+			isa = PBXGroup;
+			children = (
+				95BB177518F3919B002DC954 /* sprites.atlas */,
+				8BAD007918EAEBA9008C9E57 /* Backgrounds */,
+			);
+			path = "Patsie + Patrick Art";
+			sourceTree = "<group>";
+		};
+		8BAD007918EAEBA9008C9E57 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				8BAD007A18EAEBA9008C9E57 /* L1Background1.png */,
+				8BAD007B18EAEBA9008C9E57 /* L1Background.png */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
 		8BEE135118CF893A00A975BE = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +121,7 @@
 				8BEE138918CF893B00A975BE /* Patsie and PatrickTests */,
 				8BEE135C18CF893B00A975BE /* Frameworks */,
 				8BEE135B18CF893B00A975BE /* Products */,
+				8BAD007818EAEBA9008C9E57 /* Patsie + Patrick Art */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +149,9 @@
 		8BEE136518CF893B00A975BE /* Patsie and Patrick */ = {
 			isa = PBXGroup;
 			children = (
+				95B401F818F87400001FA0A9 /* iPad */,
+				8BAD007518EADFDA008C9E57 /* SKSpriteNode+debug.h */,
+				8BAD007618EADFDA008C9E57 /* SKSpriteNode+debug.m */,
 				8BEE136E18CF893B00A975BE /* AppDelegate.h */,
 				8BEE136F18CF893B00A975BE /* AppDelegate.m */,
 				8BEE137118CF893B00A975BE /* Main.storyboard */,
@@ -162,6 +193,13 @@
 				8BEE138C18CF893B00A975BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95B401F818F87400001FA0A9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +249,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jasmine Wright";
 				TargetAttributes = {
+					8BEE135918CF893B00A975BE = {
+						DevelopmentTeam = RHS54MNZHX;
+					};
 					8BEE138118CF893B00A975BE = {
 						TestTargetID = 8BEE135918CF893B00A975BE;
 					};
@@ -240,10 +281,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BB177618F3919B002DC954 /* sprites.atlas in Resources */,
 				8BEE136A18CF893B00A975BE /* InfoPlist.strings in Resources */,
 				8BEE137D18CF893B00A975BE /* Images.xcassets in Resources */,
+				8BAD008318EAEBA9008C9E57 /* L1Background1.png in Resources */,
 				8BEE137B18CF893B00A975BE /* Spaceship.png in Resources */,
 				8BEE137318CF893B00A975BE /* Main.storyboard in Resources */,
+				8BAD008418EAEBA9008C9E57 /* L1Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEE137918CF893B00A975BE /* MyScene.m in Sources */,
+				8BAD007718EADFDA008C9E57 /* SKSpriteNode+debug.m in Sources */,
 				8BEE137618CF893B00A975BE /* ViewController.m in Sources */,
 				8BEE137018CF893B00A975BE /* AppDelegate.m in Sources */,
 				8BEE136C18CF893B00A975BE /* main.m in Sources */,
@@ -392,11 +437,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Patsie and Patrick/Patsie and Patrick-Prefix.pch";
 				INFOPLIST_FILE = "Patsie and Patrick/Patsie and Patrick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,11 +456,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Patsie and Patrick/Patsie and Patrick-Prefix.pch";
 				INFOPLIST_FILE = "Patsie and Patrick/Patsie and Patrick-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -476,6 +531,7 @@
 				8BEE139518CF893C00A975BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEE139618CF893C00A975BE /* Build configuration list for PBXNativeTarget "Patsie and PatrickTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +540,7 @@
 				8BEE139818CF893C00A975BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

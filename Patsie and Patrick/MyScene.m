@@ -33,6 +33,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
 
 @implementation MyScene
 
+<<<<<<< HEAD
 {
     SKNode *_gameNode;
     SKSpriteNode *_background;
@@ -70,6 +71,11 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         [self addChild:_l1patsiepatrick];
         
         _myCircle9 =[[SKSpriteNode alloc]initWithColor:[SKColor yellowColor] size:CGSizeMake(20, 20)];
+=======
+-(id)initWithSize:(CGSize)size {
+    if (self = [super initWithSize:size]) {
+        /* Setup your scene here */
+>>>>>>> FETCH_HEAD
         
         [_myCircle9 setPosition:CGPointMake(270, 350)];
         
@@ -80,6 +86,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         self.physicsWorld.gravity = CGVectorMake(-0.5, -0.4);
         
         
+<<<<<<< HEAD
         _myCircle8 =[[SKSpriteNode alloc]initWithColor:[SKColor purpleColor] size:CGSizeMake(20, 20)];
         
         [_myCircle8 setPosition:CGPointMake(550, 370)];
@@ -104,6 +111,11 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         
 
          }
+=======
+        // yury was here
+        [self addChild:myLabel];
+    }
+>>>>>>> FETCH_HEAD
     return self;
 }
          

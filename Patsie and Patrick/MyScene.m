@@ -259,28 +259,6 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
 //    
 //}
 
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    for (SKSpriteNode *node in self.children) {
-//        if ([node.name isEqualToString:@"present"])
-//            [node.physicsBody applyImpulse:
-//             CGVectorMake(0, arc4random()%50)];
-//        if ([node.name isEqualToString:@"Bad present"])
-//            [node.physicsBody applyImpulse:
-//             CGVectorMake(0, arc4random()%50)];
-//        if ([node.name isEqualToString:@"Bad present Right"])
-//            [node.physicsBody applyImpulse:
-//             CGVectorMake(0, arc4random()%50)];
-//        if ([node.name isEqualToString:@"Bad present Three"])
-//            [node.physicsBody applyImpulse:
-//             CGVectorMake(0, arc4random()%50)];
-//    }
-//    SKAction *shake = [SKAction moveByX:0 y:10 duration:0.05];
-//    [self runAction:
-//     [SKAction repeatAction:
-//      [SKAction sequence:@[shake, [shake reversedAction]]]
-//                      count:5]];
-//}
 - (void)inGameMessage:(NSString*)text
 {
     // 1
